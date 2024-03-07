@@ -11,8 +11,23 @@
     }
 })();
 
-const buttonElem = document.querySelector('.wrapper_button');
-const modalElem = document.querySelector('.backdrop');
-const openModal = () => { modalElem. }
 
-buttonElem.addEventListener('click', openModal);
+
+window.onload = () => {
+    const buttonElem = document.querySelector('.wrapper_button');
+    const modalElem = document.querySelector('.backdrop');
+    const closeBtnElem = document.querySelector('.modal-btn');
+
+    // buttonElem.onclick = () => {
+    //     modalElem.classList.add("is-open");
+    // }
+    // closeBtnElem.onclick = () => {
+    //     modalElem.classList.remove("is-open");
+    // }
+
+    function toggleModal() {
+        modalElem.classList.toggle('is-open');
+    }
+    buttonElem.onclick = toggleModal;
+    closeBtnElem.onclick = toggleModal;
+}
